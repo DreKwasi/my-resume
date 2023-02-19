@@ -2,17 +2,36 @@ import streamlit as st
 from helper import styles
 from pathlib import Path
 from PIL import Image
+from streamlit_option_menu import option_menu
+from streamlit_extras.badges import badge
+
 
 
 st.set_page_config(
     page_title="Digital CV | Andrews Boateng",
     page_icon="🧾",
-    initial_sidebar_state="collapsed",
+    initial_sidebar_state="expanded",
     layout="centered",
 )
 
 styles.load_css_file("styles/main.css")
 
+# option_menu(
+#     None,
+#     ["Resume", "Portfolio"],
+#     orientation="horizontal",
+#     styles={
+#         "container": {"padding": "0!important", "background-color": "#002b36"},
+#         "icon": {"color": "white", "font-size": "20px"},
+#         "nav-link": {
+#             "font-size": "20px",
+#             "text-align": "center",
+#             "margin": "0px",
+#             "--hover-color": "#577678",
+#         },
+#         "nav-link-selected": {"background-color": "#001e25"},
+#     },
+# )
 
 st.markdown(
     '<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">',
@@ -47,11 +66,8 @@ st.markdown(
         <a class="nav-link" href="#projects">Projects</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="#publications">Publications</a>
+        <a class="nav-link" href="#publications">Publications & Licenses</a>
     </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#licenses">Licenses</a>
-      </li>
     </ul>
   </div>
 </nav>
@@ -74,7 +90,7 @@ Backend Developer/Data Analyst assisting organizations to 10x profitability via 
 EMAIL = "andrewsboateng137@gmail.com"
 SOCIAL_MEDIA = {
     "LinkedIn": "https://www.linkedin.com/in/aaboateng",
-    "GitHub": "https://github.com/drekwasi",
+    "github": "drekwasi",
 }
 
 with open(resume_file, "rb") as pdf_file:
@@ -104,7 +120,11 @@ with col2:
 st.write("\n")
 cols = st.columns(len(SOCIAL_MEDIA))
 for index, (platform, link) in enumerate(SOCIAL_MEDIA.items()):
-    cols[index].write(f"[{platform}]({link})")
+    if platform == "github":
+        with cols[index]:
+            badge("github", link)
+    else:
+        cols[index].write(f"[{platform}]({link})")
 
 
 def little_headers(a, b):
@@ -129,42 +149,46 @@ def content_txt(a, b):
         st.write(b)
 
 
-st.subheader("Summary")
+st.subheader("Summary 🌌")
 st.write(
-    """I'm a self-motivated data analyst and Python developer with over 3 years of experience in data analytics and Python web development.
-I specialize in implementing cost-saving solutions for organizations, including a medication alternatives suggestion tool, an expiry management tool, and an order review model, resulting in over $500K in savings.
-I have a strong proficiency in Python, SQL, and Excel, and experience in microservice development and data analytics.
-My focus is on optimizing efficiency for organizations and increasing profitability via data-driven in-house tools"""
+    """As a self-motivated data analyst and Python developer with over 3 years of experience, 
+    I specialize in implementing data-driven solutions for organizations. 
+    My past projects have resulted in over $500K in cost-savings and hundreds of saved man-hours.
+    With a strong proficiency in Python, SQL, and Spreadsheets, as well as experience in web development and data analytics,
+    I am dedicated to optimizing efficiency for organizations and increasing profitability via data-driven in-house tools.
+    I strive to leverage my skills and experience to drive positive results and help organizations achieve their business goals. """
 )
 st.markdown("----")
 
-st.subheader("Skills")
-content_txt("🧠Programming Languages", "Python, AppScript, HTML ")
-content_txt("📚Frameworks", "Django, Django REST Framework, jQuery, AJAX")
-content_txt("💫Data processing/wrangling", "numpy, pandas, sql, vaex")
-content_txt("🎰Machine Learning", "scikit-learn")
+st.subheader("Skills 🧰")
+content_txt("🧠Programming Languages:", "Python, AppScript, HTML ")
+content_txt("📚Frameworks:", "Django, Django REST Framework, jQuery, AJAX")
+content_txt("💫Data processing/wrangling:", "numpy, pandas, sql, vaex")
+content_txt("🎰Machine Learning:", "scikit-learn")
 content_txt(
-    "📊Data Visualization", "ploty, matplotlib, seaborn, Google Sheets, Metabase"
+    "📊Data Visualization:", "ploty, matplotlib, seaborn, spreadsheets, Metabase"
 )
 content_txt("🐱‍💻Databases", "PostgreSQL")
 content_txt("🛩️Model Deployment", "Streamlit")
 content_txt("🌩️Cloud & Version Control", "Docker, Heroku, render, Deta, Github")
-content_txt("📇Methodologies", "Functional Programming, Object-Oriented Programming")
+content_txt("📇Methodologies", "Functional & Object-Oriented Programming, REST")
 st.markdown("----")
 
-st.subheader("Work Experience")
-little_headers("**Supply Chain Customer Solutions Associate** | mPharma", "April, 2021 to Present")
+st.subheader("Work Experience 🧑‍💼")
+little_headers(
+    "**Supply Chain Customer Solutions Associate** | mPharma", "April, 2021 to Present"
+)
 st.markdown(
     """
-- 🚙 Saved $400K in expiry risks by developing an automated alternative medication suggestions' tool,
-using data wrangling and deployed with Streamlit in 12 months.
+- 🚙 Saved **$400K** in expiry risks by developing an automated alternative medication suggestions' tool,
+using data wrangling and deployed with Streamlit in the first 12 months.
 - 🚙 Launched an Order Review Model for proprietary facilities using streamlit, python and metabase
-resulting in cost-savings worth $30K in one month.
-- 🚙 Enhanced visibility of key revenue drivers by 60% via CRM and Order Processing dashboards
+resulting in cost-savings worth **$30K** in one month.
+- 🚙 Enhanced visibility of key revenue drivers by **60%** via CRM and Order Processing dashboards
 using Streamlit, Python, Google Sheets, AppScript and Excel.
-- 🚙 Accelerated the customer order documentation process by 85% using Python and deployed with Streamlit.
+- 🚙 Accelerated the customer order documentation process by **85%** using Python and deployed with Streamlit.
 - 🚙 Boosted efficiency in data acquisition by developing a mock-up ETL process to automate
-a set of data quality checks resulting in a 65% decrease in data processing time.
+a set of data quality checks resulting in a **65%** decrease in data processing time.
 """
 )
 
@@ -174,68 +198,72 @@ little_headers(
 )
 st.markdown(
     """
-- 🥼 Successfully implemented a Principal Component Analysis to improve the cross-discrimination between
-biomarkers, resulting in a 50% improvement in feature selection efficiency.
+- 🥼 Implemented a Principal Component Analysis resulting in a **50%** improvement in feature selection efficiency.
 - 🥼 Developed a feature selection algorithm based on Cluster Resolution Feature Selection using python,
-which identified approximately 10 putative biomarkers from a pool of more than 60 features/biomarkers.
+identifying approximately 10 putative biomarkers from a pool of more than 60 biomarkers.
     """
 )
 st.markdown("----")
 
-st.subheader("Volunteer Work Experience")
+st.subheader("Volunteer Work Experience 👷‍♂️")
 
-little_headers("**Volunteer Data/Operations Analyst** | Synlab Ghana", "Jan, 2023 to Present")
+little_headers(
+    "**Data/Operations Analyst** | Synlab Ghana", "Jan, 2023 to Present"
+)
 st.markdown(
     """
-- 🧪 Improved Internal Requisition by 70% by developing a web based requisition app using 
+- 🧪 Improved Internal Requisition by **70%** by developing a web based requisition app using 
 Streamlit, Deta, Google Cloud & Python.
-- 🧪 Enhanced Operational Cost Visibility by 35% using a web-based dashboard for business leads and c-suite members
+- 🧪 Enhanced Operational Cost Visibility by **35%** using a web-based dashboard for business leads and c-suite members
 using Streamlit, Deta, Google Cloud & Python.
     """
 )
 
 little_headers(
-    "**Volunteer Research Associate** | University of Ghana (School of Pharmacy)",
+    "**Research Associate** | University of Ghana (School of Pharmacy)",
     "Dec, 2019 to Present",
 )
 st.markdown(
     """
-- 👨‍🏫 Built an ML Classification Model to identify between origins of honey and differentiate pure/adulterated
-honey products on the Ghanaian market.
-- 👨‍🏫 Assisted in training more than 4 project students on employing data science in chemometrics.
+- 👨‍🏫 Built an ML Classification Model with a **>95%** accuracy in differentiating between and origins of honey 
+and indentifying the pure/adulterated honey products on the Ghanaian market.
+- 👨‍🏫 Assisted in training more than **4 project students** on employing data science in chemometrics.
     """
 )
 
-st.subheader("Education")
-little_headers("**Bachelor of Pharmacy**, University of Ghana (Legon)", "2015-2019")
+st.subheader("Education 🎒")
+little_headers("**Bachelor of Pharmacy**, University of Ghana (Legon)", "2015 to 2019")
 st.markdown("----")
 
-st.subheader("Projects")
-little_headers("QuickHire | Project Link", "Dec, 2022 - Present")
+st.subheader("Projects 🏗️")
+little_headers("[QuickHire](https://quickhire.streamlit.app)", "Dec, 2022 to Present")
 st.markdown(
-    """Collaborated with Joel Anaman to develop a streamlit web app using the Google’s Custom Search
+    """Collaborated with Joel Anaman to develop a streamlit web app using the Google's Custom Search
 API to scour job boards via custom search keys"""
 )
 
-little_headers("CSGH | Project Link", "Nov, 2022 – Present")
+little_headers("CSGH", "Nov, 2022 to Present")
 st.markdown(
-    "An All-in-one order processing and inventory web application built with Streamlit"
+    """An All-in-one order processing and inventory web application built with
+    Streamlit with an inbuilt CRM and Order Processing Dashboard. Project Link Available On Request"""
 )
 
-little_headers("Order Review Model | Project Link", "Oct, 2022 – Present")
+little_headers(
+    "[Order Review Model](https://csghreview.streamlit.app)", "Oct, 2022 to Present"
+)
 st.markdown(
     "Web Application in Streamlit for Order Validation, Insight Analysis and Flow casting."
 )
 st.markdown("----")
 
-st.subheader("Publications")
+st.subheader("Publications 📝")
 st.markdown(
-    """Evaluation of chemometric classification and regression models for the detection of syrup
-adulteration in honey – Jun, 2022"""
+    """[Evaluation of chemometric classification and regression models for the detection of syrup
+adulteration in honey](https://www.sciencedirect.com/science/article/pii/S0023643822004339) - Jun, 2022"""
 )
 st.markdown("----")
 
-st.subheader("Licenses")
+st.subheader("Licenses 🏆")
 st.markdown(
     """Pharmacist - Pharmaceutical Society of Ghana (License Number: PSGH 5535)"""
 )
