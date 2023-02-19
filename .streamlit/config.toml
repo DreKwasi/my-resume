@@ -1,0 +1,8 @@
+[theme]
+backgroundColor="#024657"
+textColor="#FFFFF"
+
+
+[server]
+showWarningOnDirectExecution = false
+runOnSave = true

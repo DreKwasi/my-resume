@@ -1,0 +1,5 @@
+.streamlit/secrets.toml
+cred/
+py_env
+__pycache__
+.vscode/
