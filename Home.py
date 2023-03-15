@@ -172,6 +172,7 @@ st.markdown("----")
 
 st.subheader("Skills 🧰")
 content_txt("🧠Programming Languages:", "Python, AppScript, HTML ")
+content_txt("🧠Business Intelligence Tools:", "Power BI, Metabase, Streamlit")
 content_txt("📚Frameworks:", "Django, Django REST Framework, jQuery, AJAX")
 content_txt("💫Data processing/wrangling:", "numpy, pandas, sql, vaex")
 content_txt("🎰Machine Learning:", "scikit-learn")
@@ -180,7 +181,7 @@ content_txt(
 )
 content_txt("🐱‍💻Databases", "PostgreSQL")
 content_txt("🛩️Model Deployment", "Streamlit")
-content_txt("🌩️Cloud & Version Control", "Docker, Heroku, render, Deta, Github")
+content_txt("🌩️Cloud & Version Control", "Docker, Heroku, render, Deta, Github, Streamlit")
 content_txt("📇Methodologies", "Functional & Object-Oriented Programming, REST")
 st.markdown("----")
 
@@ -222,8 +223,13 @@ little_headers(
 )
 st.markdown(
     """
-- 🧪 Improved Internal Requisition by **70%** by developing a web based requisition app using 
-Streamlit, Deta, Google Cloud & Python.
+- 🧪 Improved Internal Requisition by 70% by developing a web-based requisition app using Streamlit,
+Deta, Google Sheets & Google Cloud.
+- 🧪 Enhanced operational visibility by 35% using a cloud based dashboard for business leads
+and c-suite executives using Streamlit, Deta & Google Cloud.
+- 🧪 Developed a forecasting model utilizing moving averages and Pareto analysis, 
+resulting in a 70% improvement in projected revenue targets for 2023, 
+while identifying and highlighting key revenue drivers.
 - 🧪 Enhanced Operational Cost Visibility by **35%** using a web-based dashboard for business leads and c-suite members
 using Streamlit, Deta, Google Cloud & Python.
     """
@@ -237,7 +243,7 @@ st.markdown(
     """
 - 👨‍🏫 Built an ML Classification Model with a **>95%** accuracy in differentiating between and origins of honey 
 and indentifying the pure/adulterated honey products on the Ghanaian market.
-- 👨‍🏫 Assisted in training more than **4 project students** on employing data science in chemometrics.
+- 👨‍🏫 Trained more than 4 university undergraduates on employing data science in chemometrics.
     """
 )
 
