@@ -172,7 +172,7 @@ st.markdown("----")
 
 st.subheader("Skills 🧰")
 content_txt("🧠Programming Languages:", "Python, AppScript, HTML ")
-content_txt("🧠Business Intelligence Tools:", "Power BI, Metabase, Streamlit")
+content_txt("🧠BI Tools:", "Power BI, Metabase, Streamlit")
 content_txt("📚Frameworks:", "Django, Django REST Framework, jQuery, AJAX")
 content_txt("💫Data processing/wrangling:", "numpy, pandas, sql, vaex")
 content_txt("🎰Machine Learning:", "scikit-learn")
