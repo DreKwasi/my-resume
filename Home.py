@@ -230,8 +230,6 @@ and c-suite executives using Streamlit, Deta & Google Cloud.
 - 🧪 Developed a forecasting model utilizing moving averages and Pareto analysis, 
 resulting in a 70% improvement in projected revenue targets for 2023, 
 while identifying and highlighting key revenue drivers.
-- 🧪 Enhanced Operational Cost Visibility by **35%** using a web-based dashboard for business leads and c-suite members
-using Streamlit, Deta, Google Cloud & Python.
     """
 )
 
