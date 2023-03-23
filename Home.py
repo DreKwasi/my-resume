@@ -162,11 +162,12 @@ def content_txt(a, b):
 st.subheader("Summary 🌌")
 st.write(
     """As a self-motivated data analyst and Python developer with over 3 years of experience, 
-    I specialize in implementing data-driven solutions for organizations. 
-    My past projects have resulted in over $500K in cost-savings and hundreds of saved man-hours.
-    With a strong proficiency in Python, SQL, and Spreadsheets, as well as experience in web development and data analytics,
-    I am dedicated to optimizing efficiency for organizations and increasing profitability via data-driven in-house tools.
-    I strive to leverage my skills and experience to drive positive results and help organizations achieve their business goals. """
+    I specialize in implementing data-driven solutions for organizations which has resulted 
+    in over $500K in cost-savings and hundreds of saved man-hours. Proficient in Python, SQL,
+    and Spreadsheets, I am dedicated to optimizing efficiency for organizations and increasing 
+    profitability via data-driven in-house tools. I strive to leverage my skills and experience
+    to identify insights and trends in complex data sets, and effectively communicate findings
+    to drive informed business decisions """
 )
 st.markdown("----")
 
@@ -191,15 +192,19 @@ little_headers(
 )
 st.markdown(
     """
-- 🚙 Saved **$400K** in expiry risks by developing an automated alternative medication suggestions' tool,
-using data wrangling and deployed with Streamlit in the first 12 months.
-- 🚙 Launched an Order Review Model for proprietary facilities using streamlit, python and metabase
-resulting in cost-savings worth **$30K** in one month.
-- 🚙 Enhanced visibility of key revenue drivers by **60%** via CRM and Order Processing dashboards
-using Streamlit, Python, Google Sheets, AppScript and Excel.
-- 🚙 Accelerated the customer order documentation process by **85%** using Python and deployed with Streamlit.
-- 🚙 Boosted efficiency in data acquisition by developing a mock-up ETL process to automate
-a set of data quality checks resulting in a **65%** decrease in data processing time.
+- 🚙 Saved **>$400K** in expiry risks by developing an automated
+alternative medication suggestions' tool, using data wrangling and deployed with Streamlit.
+- 🚙 Collaborated closely with operations and product teams in launching an Order Review Model for 
+proprietary facilities utilizing Streamlit and Metabase resulting in cost-savings worth $30K in one month.
+- 🚙 Built a data pipeline using BigQuery, implementing data quality improvements with Python 
+and reducing data errors by **50%**, leading to a more reliable and accessible data system.
+- 🚙 Created data connectors with custom SQL queries from BigQuery to Looker Studio and 
+Google Sheets, improving data usability by **85%** and increasing data visibility,
+resulting in better-informed business decisions.
+- 🚙 Developed Streamlit, Google Sheets, AppScript, and Excel dashboards,
+enhancing visibility of key revenue drivers by **60%** for CRM and Order Processing data
+- 🚙 Implemented a mock-up ETL process to automate data quality checks, resulting in 
+a **65%** decrease in data processing time and improving the overall efficiency of data management.
 """
 )
 
@@ -211,25 +216,28 @@ st.markdown(
     """
 - 🥼 Implemented a Principal Component Analysis resulting in a **50%** improvement in feature selection efficiency.
 - 🥼 Developed a feature selection algorithm based on Cluster Resolution Feature Selection using python,
-identifying approximately 10 putative biomarkers from a pool of more than 60 biomarkers.
+identifying approximately 10 putative biomarkers from a pool of >60 biomarkers.
     """
 )
 st.markdown("----")
 
-st.subheader("Volunteer Work Experience 👷‍♂️")
+st.subheader("Work Experience (Consultancy) 👷‍♂️")
 
 little_headers(
     "**Data/Operations Analyst** | Synlab Ghana", "Jan, 2023 to Present"
 )
 st.markdown(
     """
-- 🧪 Improved Internal Requisition by 70% by developing a web-based requisition app using Streamlit,
-Deta, Google Sheets & Google Cloud.
-- 🧪 Enhanced operational visibility by 35% using a cloud based dashboard for business leads
-and c-suite executives using Streamlit, Deta & Google Cloud.
-- 🧪 Developed a forecasting model utilizing moving averages and Pareto analysis, 
-resulting in a 70% improvement in projected revenue targets for 2023, 
-while identifying and highlighting key revenue drivers.
+- 🧪 Developed a web-based requisition application using Streamlit, Deta,
+Google Sheets, and Google Cloud, which resulted in a **70%** 
+improvement in internal requisitions processing.
+- 🧪 Created a cloud-based dashboard using Streamlit,
+Deta, and Google Cloud that enhanced operational visibility by **35%** for business leads and c-suite executives.
+- 🧪 Designed a forecasting model by utilizing moving averages and Pareto analysis,
+resulting in a **70%** improvement in projected revenue targets for 2023 
+while identifying key revenue drivers for the business.
+- 🧪 Developed No-SQL queries for fetching and parsing data from low cost cloud platform (Deta) 
+reducing expenses in data infrastructure and technologies.
     """
 )
 
@@ -256,10 +264,9 @@ st.markdown(
 API to scour job boards via custom search keys"""
 )
 
-little_headers("CSGH", "Nov, 2022 to Present")
+little_headers("[Brazilian E-commerce Analysis](https://olist-ecom.streamlit.app)", "Mar, 2023 to Present")
 st.markdown(
-    """An All-in-one order processing and inventory web application built with
-    Streamlit with an inbuilt CRM and Order Processing Dashboard. Project Link Available On Request"""
+    """A Streamlit dashboard built for Ecommerce, Distribution, Customer and Forecasting Analytics."""
 )
 
 little_headers(
