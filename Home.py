@@ -221,7 +221,7 @@ identifying approximately 10 putative biomarkers from a pool of >60 biomarkers.
 )
 st.markdown("----")
 
-st.subheader("Work Experience (Consultancy) 👷‍♂️")
+st.subheader("Work Experience (Volunteer) 👷‍♂️")
 
 little_headers(
     "**Data/Operations Analyst** | Synlab Ghana", "Jan, 2023 to Present"
